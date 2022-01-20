@@ -1,6 +1,6 @@
 class Vacancy < ApplicationRecord
   belongs_to :company
-  mas_many :applicants
+  has_many :applicants
   validates :title, presence: true
   validates :location, presence: true
   validates :description, length: { minumum: 3, maximum: 1000 },
