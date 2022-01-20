@@ -10,6 +10,9 @@ Dotenv::Railtie.load
 
 module Onebitjobs
   class Application < Rails::Application
+    config.to_prepare do
+      Devise::RegistrationsController.layout "application"
+    end
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
 
