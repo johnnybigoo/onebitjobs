@@ -1,3 +1,20 @@
+GIT
+  remote: https://github.com/kaminari/kaminari
+  revision: 26e3406a331f6a27b57a2c66b422da48851dba9f
+  specs:
+    kaminari (1.2.2)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.2.2)
+      kaminari-activerecord (= 1.2.2)
+      kaminari-core (= 1.2.2)
+    kaminari-actionview (1.2.2)
+      actionview
+      kaminari-core (= 1.2.2)
+    kaminari-activerecord (1.2.2)
+      activerecord
+      kaminari-core (= 1.2.2)
+    kaminari-core (1.2.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -228,6 +245,7 @@ DEPENDENCIES
   devise
   dotenv-rails
   jbuilder (~> 2.7)
+  kaminari!
   listen (~> 3.3)
   pg
   puma (~> 5.0)
