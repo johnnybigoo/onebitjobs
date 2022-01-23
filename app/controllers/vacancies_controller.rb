@@ -1,6 +1,12 @@
 class VacanciesController < ApplicationController
   before_action :set_vacancy, only: %i[ show edit update destroy ]
 
+  def all
+    @vacancies = Vacancy.where(
+      available: true
+    ).order(created_at: :desc).page(params[:page]).per(10)
+  end
+  
   # GET /vacancies or /vacancies.json
   def index
     @vacancies = current_company.vacancies.order(
